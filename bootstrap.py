@@ -63,7 +63,7 @@ image_labels = loadmat(image_labels_path)['labels'][0]
 image_labels -= 1
 
 files = sorted(glob.glob(os.path.join(data_path, 'jpg', '*.jpg')))
-labels = np.array(zip(files, image_labels))
+labels = np.array(list(zip(files, image_labels)))
 
 # Get current working directory for making absolute paths to images
 cwd = os.path.dirname(os.path.realpath(__file__))

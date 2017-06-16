@@ -5,7 +5,7 @@ from keras import backend as K
 from keras.engine import Layer, InputSpec
 from keras import initializations
 import config
-from base_model import BaseModel
+from models.base_model import BaseModel
 import sys
 
 sys.setrecursionlimit(3000)

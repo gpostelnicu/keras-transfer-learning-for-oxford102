@@ -131,10 +131,11 @@ def get_class_weight(d):
                 class_number[k] += 1
         k += 1
 
-    total = np.sum(class_number.values())
-    max_samples = np.max(class_number.values())
+    class_lst = list(class_number.values())
+    total = np.sum(class_lst)
+    max_samples = np.max(class_lst)
     mu = 1. / (total / float(max_samples))
-    keys = class_number.keys()
+    keys = list(class_number.keys())
     class_weight = dict()
     for key in keys:
         score = math.log(mu * total / float(class_number[key]))
